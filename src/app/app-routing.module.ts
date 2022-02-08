@@ -5,6 +5,7 @@ import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.compo
 import { NgxToastrComponent } from './ngx-toastr/ngx-toastr.component';
 import { InternacionalizacaoComponent } from './internacionalizacao/internacionalizacao.component';
 import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
+import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'mapa-leaflet',
     component: MapaLeafletComponent,
+  },
+  {
+    path: 'botoes-midias-sociais',
+    component: BotaoMidiasSociaisComponent,
   },
 ];
 

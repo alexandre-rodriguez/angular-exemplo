@@ -11,10 +11,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxToastrComponent } from './ngx-toastr/ngx-toastr.component';
 import { InternacionalizacaoComponent } from './internacionalizacao/internacionalizacao.component';
 import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
+
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,6 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
     NgxToastrComponent,
     InternacionalizacaoComponent,
     MapaLeafletComponent,
+    BotaoMidiasSociaisComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +55,9 @@ export function createTranslateLoader(http: HttpClient) {
       },
       defaultLanguage: 'en-US',
     }),
+
+    ShareButtonsModule,
+    ShareIconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
