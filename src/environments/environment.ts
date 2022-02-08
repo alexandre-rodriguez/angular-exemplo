@@ -10,6 +10,9 @@ export const environment = {
   recaptcha: {
     siteKey: '6LedcGQeAAAAABdkiQERIul3gOQsjq4X10ocSOwP',
   },
+  recaptchav3: {
+    siteKey: '6LdH4mYeAAAAAAtUAV9WkHKeTHeuGleYqSVbcQxf',
+  },
   logger: {
     level: 'TRACE',
   },

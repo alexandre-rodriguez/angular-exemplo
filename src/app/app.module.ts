@@ -18,7 +18,7 @@ import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
-import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
+import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RecaptchaV3Module, RECAPTCHA_SETTINGS, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 import { environment } from '../environments/environment';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +27,7 @@ import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,6 +47,7 @@ const environmentConfig: any = environment.logger;
     LoggerComponent,
     HighcartsComponent,
     SpinnerComponent,
+    RecaptchaV3Component,
   ],
   imports: [
     CommonModule,
@@ -77,6 +79,7 @@ const environmentConfig: any = environment.logger;
 
     RecaptchaModule,
     RecaptchaFormsModule,
+    RecaptchaV3Module,
 
     LoggerModule.forRoot({
       level: NgxLoggerLevel[environmentConfig.level],
@@ -91,7 +94,12 @@ const environmentConfig: any = environment.logger;
     useValue: {
       siteKey: environment.recaptcha.siteKey,
     } as RecaptchaSettings,
-  },],
+  },
+  {
+    provide: RECAPTCHA_V3_SITE_KEY,
+    useValue: environment.recaptchav3.siteKey,
+  },
+],
   bootstrap: [AppComponent],
   schemas: []
 })

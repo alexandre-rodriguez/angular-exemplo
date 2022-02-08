@@ -10,6 +10,7 @@ import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -38,6 +39,10 @@ const routes: Routes = [
     component: RecaptchaV2Component,
   },
   {
+    path: 'recaptcha-v3',
+    component: RecaptchaV3Component,
+  },
+  {
     path: 'logger',
     component: LoggerComponent,
   },
@@ -52,7 +57,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
