@@ -8,6 +8,7 @@ import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
 import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { LoggerComponent } from './logger/logger.component';
+import { HighcartsComponent } from './highcarts/highcarts.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'logger',
     component: LoggerComponent,
+  },
+  {
+    path: 'highcharts',
+    component: HighcartsComponent,
   },
 ];
 

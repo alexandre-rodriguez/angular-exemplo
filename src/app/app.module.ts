@@ -24,6 +24,7 @@ import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { FormsModule } from '@angular/forms';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { LoggerComponent } from './logger/logger.component';
+import { HighcartsComponent } from './highcarts/highcarts.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -41,6 +42,7 @@ const environmentConfig: any = environment.logger;
     BotaoMidiasSociaisComponent,
     RecaptchaV2Component,
     LoggerComponent,
+    HighcartsComponent,
   ],
   imports: [
     CommonModule,
