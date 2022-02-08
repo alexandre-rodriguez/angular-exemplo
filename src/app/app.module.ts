@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxToastrComponent } from './ngx-toastr/ngx-toastr.component';
 import { InternacionalizacaoComponent } from './internacionalizacao/internacionalizacao.component';
+import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,7 +25,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     BootstrapModalComponent,
     NgxToastrComponent,
-    InternacionalizacaoComponent
+    InternacionalizacaoComponent,
+    MapaLeafletComponent,
   ],
   imports: [
     CommonModule,
