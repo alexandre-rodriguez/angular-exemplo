@@ -30,6 +30,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
 import { EmailValidatorDirective } from './form-validation/email-validator.directive';
+import { TomTomComponent } from './tom-tom/tom-tom.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -52,6 +53,7 @@ const environmentConfig: any = environment.logger;
     RecaptchaV3Component,
     FormValidationComponent,
     EmailValidatorDirective,
+    TomTomComponent,
   ],
   imports: [
     CommonModule,

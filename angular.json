@@ -95,6 +95,8 @@
               "node_modules/ngx-spinner/animations/timer.css",
               "node_modules/ngx-spinner/animations/triangle-skew-spin.css",
 
+              "node_modules/@tomtom-international/web-sdk-maps/dist/maps.css",
+
               "src/styles.scss"
             ],
             "scripts": [

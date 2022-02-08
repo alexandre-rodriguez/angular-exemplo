@@ -16,6 +16,9 @@ export const environment = {
   logger: {
     level: 'TRACE',
   },
+  tomtom: {
+    key: 'Fh6qeqoSmkXn29cSN3Uac57h3MICSl0m',
+  },
 };
 
 /*
