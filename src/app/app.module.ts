@@ -18,6 +18,10 @@ import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
+import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
+import { environment } from '../environments/environment';
+import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
+import { FormsModule } from '@angular/forms';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,6 +35,7 @@ export function createTranslateLoader(http: HttpClient) {
     InternacionalizacaoComponent,
     MapaLeafletComponent,
     BotaoMidiasSociaisComponent,
+    RecaptchaV2Component
   ],
   imports: [
     CommonModule,
@@ -38,6 +43,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
 
     NgbModule, // bootstrap
 
@@ -58,8 +64,16 @@ export function createTranslateLoader(http: HttpClient) {
 
     ShareButtonsModule,
     ShareIconsModule,
+
+    RecaptchaModule,
+    RecaptchaFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      siteKey: environment.recaptcha.siteKey,
+    } as RecaptchaSettings,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
