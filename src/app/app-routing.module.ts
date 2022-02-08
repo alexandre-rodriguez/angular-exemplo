@@ -11,6 +11,7 @@ import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
+import { FormValidationComponent } from './form-validation/form-validation.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'spinner',
     component: SpinnerComponent,
+  },
+  {
+    path: 'form-validation',
+    component: FormValidationComponent,
   },
 ];
 

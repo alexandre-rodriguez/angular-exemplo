@@ -28,6 +28,8 @@ import { HighcartsComponent } from './highcarts/highcarts.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
+import { FormValidationComponent } from './form-validation/form-validation.component';
+import { EmailValidatorDirective } from './form-validation/email-validator.directive';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -48,6 +50,8 @@ const environmentConfig: any = environment.logger;
     HighcartsComponent,
     SpinnerComponent,
     RecaptchaV3Component,
+    FormValidationComponent,
+    EmailValidatorDirective,
   ],
   imports: [
     CommonModule,
