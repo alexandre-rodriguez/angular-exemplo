@@ -9,6 +9,7 @@ import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'highcharts',
     component: HighcartsComponent,
+  },
+  {
+    path: 'spinner',
+    component: SpinnerComponent,
   },
 ];
 

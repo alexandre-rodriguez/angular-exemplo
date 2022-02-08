@@ -25,6 +25,8 @@ import { FormsModule } from '@angular/forms';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +45,7 @@ const environmentConfig: any = environment.logger;
     RecaptchaV2Component,
     LoggerComponent,
     HighcartsComponent,
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -80,6 +83,8 @@ const environmentConfig: any = environment.logger;
       serverLogLevel: NgxLoggerLevel[environmentConfig.serverLevel],
       serverLoggingUrl: environmentConfig.serverUrl,
     } as any),
+
+    NgxSpinnerModule,
   ],
   providers: [{
     provide: RECAPTCHA_SETTINGS,
@@ -87,6 +92,7 @@ const environmentConfig: any = environment.logger;
       siteKey: environment.recaptcha.siteKey,
     } as RecaptchaSettings,
   },],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: []
 })
 export class AppModule { }

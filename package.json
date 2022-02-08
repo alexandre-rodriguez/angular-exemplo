@@ -36,6 +36,7 @@
     "ng-recaptcha": "^9.0.0",
     "ngx-logger": "^5.0.7",
     "ngx-sharebuttons": "^10.0.0",
+    "ngx-spinner": "^13.1.1",
     "ngx-toastr": "^14.2.1",
     "rxjs": "~7.5.2",
     "tslib": "^2.3.1",
