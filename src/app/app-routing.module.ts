@@ -7,6 +7,7 @@ import { InternacionalizacaoComponent } from './internacionalizacao/internaciona
 import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
 import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
+import { LoggerComponent } from './logger/logger.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'recaptcha-v2',
     component: RecaptchaV2Component,
+  },
+  {
+    path: 'logger',
+    component: LoggerComponent,
   },
 ];
 

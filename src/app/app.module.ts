@@ -22,10 +22,14 @@ import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RECAPTCHA_SET
 import { environment } from '../environments/environment';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { FormsModule } from '@angular/forms';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { LoggerComponent } from './logger/logger.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
+const environmentConfig: any = environment.logger;
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ export function createTranslateLoader(http: HttpClient) {
     InternacionalizacaoComponent,
     MapaLeafletComponent,
     BotaoMidiasSociaisComponent,
-    RecaptchaV2Component
+    RecaptchaV2Component,
+    LoggerComponent,
   ],
   imports: [
     CommonModule,
@@ -67,6 +72,12 @@ export function createTranslateLoader(http: HttpClient) {
 
     RecaptchaModule,
     RecaptchaFormsModule,
+
+    LoggerModule.forRoot({
+      level: NgxLoggerLevel[environmentConfig.level],
+      serverLogLevel: NgxLoggerLevel[environmentConfig.serverLevel],
+      serverLoggingUrl: environmentConfig.serverUrl,
+    } as any),
   ],
   providers: [{
     provide: RECAPTCHA_SETTINGS,
