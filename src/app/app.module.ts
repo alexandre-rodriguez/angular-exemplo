@@ -7,13 +7,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxToastrComponent } from './ngx-toastr/ngx-toastr.component';
+import { InternacionalizacaoComponent } from './internacionalizacao/internacionalizacao.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    BootstrapModalComponent
+    BootstrapModalComponent,
+    NgxToastrComponent,
+    InternacionalizacaoComponent
   ],
   imports: [
+    CommonModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -24,6 +39,15 @@ import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.compo
       timeOut: 50000, // 5 seconds
       closeButton: true,
       progressBar: true,
+    }),
+
+    TranslateModule.forRoot({ // ngx-translate
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient],
+      },
+      defaultLanguage: 'en-US',
     }),
   ],
   providers: [],
