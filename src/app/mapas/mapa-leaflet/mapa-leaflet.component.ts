@@ -1,7 +1,9 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
 import * as L from 'leaflet';
-import { environment } from '../../environments/environment.prod';
+
+import { environment } from '../../../environments/environment';
+
 
 
 @Component({

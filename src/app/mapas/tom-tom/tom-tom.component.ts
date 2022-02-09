@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
 
 import * as tt from '@tomtom-international/web-sdk-maps';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-tom-tom',

@@ -1,68 +1,51 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
-import { NgxToastrComponent } from './ngx-toastr/ngx-toastr.component';
-import { InternacionalizacaoComponent } from './internacionalizacao/internacionalizacao.component';
-import { MapaLeafletComponent } from './mapa-leaflet/mapa-leaflet.component';
-import { BotaoMidiasSociaisComponent } from './botao-midias-sociais/botao-midias-sociais.component';
-import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { LoggerComponent } from './logger/logger.component';
 import { HighcartsComponent } from './highcarts/highcarts.component';
 import { SpinnerComponent } from './spinner/spinner.component';
-import { RecaptchaV3Component } from './recaptcha-v3/recaptcha-v3.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
-import { TomTomComponent } from './tom-tom/tom-tom.component';
 
 const routes: Routes = [
   { path: 'root', component: AppComponent },
   {
     path: 'bootstrap-modal',
-    component: BootstrapModalComponent,
+    loadChildren: () => import('./bootstrap-modal/bootstrap-modal.module').then(m => m.BootstrapModalModule),
   },
   {
     path: 'ngx-toastr',
-    component: NgxToastrComponent,
+    loadChildren: () => import('./ngx-toastr/ngx-toastr.module').then(m => m.NgxToastrModule),
   },
   {
     path: 'internacionalizacao',
-    component: InternacionalizacaoComponent,
-  },
-  {
-    path: 'mapa-leaflet',
-    component: MapaLeafletComponent,
-  },
-  {
-    path: 'mapa-tomtom',
-    component: TomTomComponent,
+    loadChildren: () => import('./internacionalizacao/internacionalizacao.module').then(m => m.InternacionalizacaoModule),
   },
   {
     path: 'botoes-midias-sociais',
-    component: BotaoMidiasSociaisComponent,
-  },
-  {
-    path: 'recaptcha-v2',
-    component: RecaptchaV2Component,
-  },
-  {
-    path: 'recaptcha-v3',
-    component: RecaptchaV3Component,
+    loadChildren: () => import('./botao-midias-sociais/botao-midias-sociais.module').then(m => m.BotaoMidiasSociaisModule),
   },
   {
     path: 'logger',
-    component: LoggerComponent,
+    loadChildren: () => import('./logger/logger.module').then(m => m.LoggerInternalModule),
   },
   {
     path: 'highcharts',
-    component: HighcartsComponent,
+    loadChildren: () => import('./highcarts/highcarts.module').then(m => m.HighcartsModule),
   },
   {
     path: 'spinner',
-    component: SpinnerComponent,
+    loadChildren: () => import('./spinner/spinner.module').then(m => m.SpinnerModule),
   },
   {
     path: 'form-validation',
-    component: FormValidationComponent,
+    loadChildren: () => import('./form-validation/form-validation.module').then(m => m.FormValidationModule),
+  },
+  { path: 'mapa', loadChildren: () => import('./mapas/mapas.module').then(m => m.MapasModule) },
+  { path: 'recaptcha', loadChildren: () => import('./recaptchas/recaptchas.module').then(m => m.RecaptchasModule) },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   },
 ];
 
