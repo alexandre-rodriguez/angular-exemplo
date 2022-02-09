@@ -607,6 +607,9 @@ MIT
 @ngx-translate/http-loader
 MIT
 
+@tomtom-international/web-sdk-maps
+SEE LICENSE IN LICENSE.txt
+
 bootstrap
 MIT
 The MIT License (MIT)
