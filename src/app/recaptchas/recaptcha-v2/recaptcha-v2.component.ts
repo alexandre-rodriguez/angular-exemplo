@@ -6,14 +6,12 @@ import { NgForm } from '@angular/forms';
   templateUrl: './recaptcha-v2.component.html',
   styleUrls: ['./recaptcha-v2.component.scss'],
 })
-export class RecaptchaV2Component implements OnInit {
+export class RecaptchaV2Component {
   token: string | undefined;
 
   constructor() {
     this.token = undefined;
   }
-
-  ngOnInit(): void {}
 
   public send(form: NgForm): void {
     if (form.invalid) {

@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mapas.component.html',
   styleUrls: ['./mapas.component.scss'],
 })
-export class MapasComponent implements OnInit {
+export class MapasComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

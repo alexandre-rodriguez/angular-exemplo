@@ -6,10 +6,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './bootstrap-modal.component.html',
   styleUrls: ['./bootstrap-modal.component.scss'],
 })
-export class BootstrapModalComponent implements OnInit {
+export class BootstrapModalComponent {
   constructor(private modalService: NgbModal) {}
-
-  ngOnInit(): void {}
 
   public open(modal: any): void {
     let ref = this.modalService.open(modal);

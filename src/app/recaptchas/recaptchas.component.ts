@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './recaptchas.component.html',
   styleUrls: ['./recaptchas.component.scss'],
 })
-export class RecaptchasComponent implements OnInit {
+export class RecaptchasComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

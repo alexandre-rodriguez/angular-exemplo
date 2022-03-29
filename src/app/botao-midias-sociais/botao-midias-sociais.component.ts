@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './botao-midias-sociais.component.html',
   styleUrls: ['./botao-midias-sociais.component.scss'],
 })
-export class BotaoMidiasSociaisComponent implements OnInit {
+export class BotaoMidiasSociaisComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

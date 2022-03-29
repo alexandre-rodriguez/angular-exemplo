@@ -6,10 +6,8 @@ import { NGXLogger } from 'ngx-logger';
   templateUrl: './logger.component.html',
   styleUrls: ['./logger.component.scss'],
 })
-export class LoggerComponent implements OnInit {
+export class LoggerComponent {
   constructor(private logger: NGXLogger) {}
-
-  ngOnInit(): void {}
 
   public showTrace(): void {
     this.logger.trace('TRACE level');
