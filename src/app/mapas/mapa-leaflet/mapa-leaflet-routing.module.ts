@@ -5,12 +5,12 @@ import { MapaLeafletComponent } from './mapa-leaflet.component';
 const routes: Routes = [
   {
     path: '',
-    component: MapaLeafletComponent
-  }
+    component: MapaLeafletComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MapaLeafletRoutingModule { }
+export class MapaLeafletRoutingModule {}

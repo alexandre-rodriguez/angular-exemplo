@@ -1,0 +1,15 @@
+<h4 class="text-center">Controle customizado</h4>
+
+<div class="container py-3">
+  <form [formGroup]="formulario">
+    <app-custom-counter
+      [increment]="10"
+      formControlName="quantity"
+    ></app-custom-counter>
+  </form>
+
+  valid: {{ formulario.controls['quantity'].valid }}
+  <br />
+  touched:
+  {{ formulario.controls['quantity'].touched }}
+</div>

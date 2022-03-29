@@ -5,8 +5,6 @@ import { BotaoMidiasSociaisRoutingModule } from './botao-midias-sociais-routing.
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
-
-
 @NgModule({
   declarations: [BotaoMidiasSociaisComponent],
   imports: [
@@ -14,6 +12,6 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     BotaoMidiasSociaisRoutingModule,
     ShareButtonsModule,
     ShareIconsModule,
-  ]
+  ],
 })
-export class BotaoMidiasSociaisModule { }
+export class BotaoMidiasSociaisModule {}

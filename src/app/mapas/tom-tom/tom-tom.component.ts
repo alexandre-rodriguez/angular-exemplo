@@ -7,14 +7,12 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-tom-tom',
   templateUrl: './tom-tom.component.html',
-  styleUrls: ['./tom-tom.component.scss']
+  styleUrls: ['./tom-tom.component.scss'],
 })
-export class TomTomComponent implements AfterViewInit  {
-
+export class TomTomComponent implements AfterViewInit {
   map: any;
 
-  constructor() {
-  }
+  constructor() {}
 
   public ngAfterViewInit(): void {
     this.loadMap();
@@ -45,8 +43,7 @@ export class TomTomComponent implements AfterViewInit  {
     this.map.addControl(new tt.FullscreenControl());
     this.map.addControl(new tt.NavigationControl());
 
-    this.getCurrentPosition()
-    .subscribe((position: any) => {
+    this.getCurrentPosition().subscribe((position: any) => {
       this.map.flyTo({
         center: {
           lat: position.latitude,
@@ -55,14 +52,18 @@ export class TomTomComponent implements AfterViewInit  {
         zoom: 13,
       });
 
-      const popup = new tt.Popup({ anchor: 'bottom', offset: { bottom: [0, -40] } }).setHTML('TomTom');
+      const popup = new tt.Popup({
+        anchor: 'bottom',
+        offset: { bottom: [0, -40] },
+      }).setHTML('TomTom');
 
-      var marker = new tt.Marker().setLngLat({
-        lat: position.latitude,
-        lng: position.longitude,
-      }).addTo(this.map);
+      var marker = new tt.Marker()
+        .setLngLat({
+          lat: position.latitude,
+          lng: position.longitude,
+        })
+        .addTo(this.map);
       marker.setPopup(popup).togglePopup();
     });
   }
-
 }

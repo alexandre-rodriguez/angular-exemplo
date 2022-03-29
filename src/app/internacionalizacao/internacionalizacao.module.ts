@@ -20,7 +20,8 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     FormsModule,
 
-    TranslateModule.forRoot({ // ngx-translate
+    TranslateModule.forRoot({
+      // ngx-translate
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
@@ -28,7 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
       },
       defaultLanguage: 'en-US',
     }),
-
-  ]
+  ],
 })
-export class InternacionalizacaoModule { }
+export class InternacionalizacaoModule {}

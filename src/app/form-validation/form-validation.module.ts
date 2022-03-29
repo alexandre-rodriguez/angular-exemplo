@@ -5,14 +5,8 @@ import { EmailValidatorDirective } from './email-validator.directive';
 import { FormValidationRoutingModule } from './form-validation-routing.module';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [FormValidationComponent, EmailValidatorDirective],
-  imports: [
-    CommonModule,
-    FormsModule,
-    FormValidationRoutingModule
-  ]
+  imports: [CommonModule, FormsModule, FormValidationRoutingModule],
 })
-export class FormValidationModule { }
+export class FormValidationModule {}

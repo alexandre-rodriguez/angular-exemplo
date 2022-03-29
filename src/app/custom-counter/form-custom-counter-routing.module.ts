@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BotaoMidiasSociaisComponent } from './botao-midias-sociais.component';
+import { FormCustomCounterComponent } from './form-custom-counter.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BotaoMidiasSociaisComponent,
+    component: FormCustomCounterComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BotaoMidiasSociaisRoutingModule {}
+export class FormCustomCounterComponentRoutingModule {}

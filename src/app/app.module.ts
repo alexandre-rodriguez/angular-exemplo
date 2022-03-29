@@ -7,14 +7,13 @@ import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
 
-    ToastrModule.forRoot({  // ngx-toastr
+    ToastrModule.forRoot({
+      // ngx-toastr
       timeOut: 50000, // 5 seconds
       closeButton: true,
       progressBar: true,

@@ -5,12 +5,12 @@ import { TomTomComponent } from './tom-tom.component';
 const routes: Routes = [
   {
     path: '',
-    component: TomTomComponent
-  }
+    component: TomTomComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TomTomRoutingModule { }
+export class TomTomRoutingModule {}

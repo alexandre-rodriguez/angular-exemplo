@@ -6,12 +6,12 @@ import { BootstrapModalComponent } from './bootstrap-modal.component';
 const routes: Routes = [
   {
     path: '',
-    component: BootstrapModalComponent
-  }
+    component: BootstrapModalComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class BootstrapModalRoutingModule { }
+export class BootstrapModalRoutingModule {}

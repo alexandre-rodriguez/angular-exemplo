@@ -18,6 +18,6 @@ const environmentConfig: any = environment.logger;
       serverLogLevel: NgxLoggerLevel[environmentConfig.serverLevel],
       serverLoggingUrl: environmentConfig.serverUrl,
     } as any),
-  ]
+  ],
 })
-export class LoggerInternalModule { }
+export class LoggerInternalModule {}

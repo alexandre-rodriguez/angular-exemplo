@@ -3,13 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TomTomRoutingModule } from './tom-tom-routing.module';
 import { TomTomComponent } from './tom-tom.component';
 
-
-
 @NgModule({
   declarations: [TomTomComponent],
-  imports: [
-    CommonModule,
-    TomTomRoutingModule,
-  ]
+  imports: [CommonModule, TomTomRoutingModule],
 })
-export class TomTomModule { }
+export class TomTomModule {}

@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-mapas',
   templateUrl: './mapas.component.html',
-  styleUrls: ['./mapas.component.scss']
+  styleUrls: ['./mapas.component.scss'],
 })
 export class MapasComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -4,14 +4,12 @@ import { NGXLogger } from 'ngx-logger';
 @Component({
   selector: 'app-logger',
   templateUrl: './logger.component.html',
-  styleUrls: ['./logger.component.scss']
+  styleUrls: ['./logger.component.scss'],
 })
 export class LoggerComponent implements OnInit {
+  constructor(private logger: NGXLogger) {}
 
-  constructor(private logger: NGXLogger) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public showTrace(): void {
     this.logger.trace('TRACE level');
@@ -36,5 +34,4 @@ export class LoggerComponent implements OnInit {
   public showFatal(): void {
     this.logger.fatal('FATAL level');
   }
-
 }

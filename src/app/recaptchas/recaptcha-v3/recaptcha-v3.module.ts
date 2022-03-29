@@ -6,14 +6,13 @@ import { environment } from '../../../environments/environment';
 import { RecaptchaV3Component } from './recaptcha-v3.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [RecaptchaV3Component],
   imports: [
     CommonModule,
     FormsModule,
     RecaptchaV3Module,
-    RecaptchaV3RoutingModule
+    RecaptchaV3RoutingModule,
   ],
   providers: [
     {
@@ -22,4 +21,4 @@ import { FormsModule } from '@angular/forms';
     },
   ],
 })
-export class RecaptchaV3InternalModule { }
+export class RecaptchaV3InternalModule {}

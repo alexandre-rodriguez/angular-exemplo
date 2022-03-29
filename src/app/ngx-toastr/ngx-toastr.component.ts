@@ -4,14 +4,12 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-toast',
   templateUrl: './ngx-toastr.component.html',
-  styleUrls: ['./ngx-toastr.component.scss']
+  styleUrls: ['./ngx-toastr.component.scss'],
 })
 export class NgxToastrComponent implements OnInit {
+  constructor(private toastrService: ToastrService) {}
 
-  constructor(private toastrService: ToastrService) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public showSuccess(): void {
     this.toastrService.success('Message Success!', 'Title Success!');

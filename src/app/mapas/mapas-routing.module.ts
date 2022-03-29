@@ -5,16 +5,21 @@ import { MapasComponent } from './mapas.component';
 const routes: Routes = [
   {
     path: 'leaflet',
-    loadChildren: () => import('./mapa-leaflet/mapa-leaflet.module').then(m => m.MapaLeafletModule),
+    loadChildren: () =>
+      import('./mapa-leaflet/mapa-leaflet.module').then(
+        m => m.MapaLeafletModule
+      ),
   },
   {
     path: 'tomtom',
-    loadChildren: () => import('./tom-tom/tom-tom.module').then(m => m.TomTomModule),
+    loadChildren: () =>
+      import('./tom-tom/tom-tom.module').then(m => m.TomTomModule),
   },
-  { path: '', component: MapasComponent }];
+  { path: '', component: MapasComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MapasRoutingModule { }
+export class MapasRoutingModule {}

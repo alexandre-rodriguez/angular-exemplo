@@ -5,15 +5,8 @@ import { SpinnerComponent } from './spinner.component';
 import { SpinnerRoutingModule } from './spinner-routing.module';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [SpinnerComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    NgxSpinnerModule,
-    SpinnerRoutingModule
-  ]
+  imports: [CommonModule, FormsModule, NgxSpinnerModule, SpinnerRoutingModule],
 })
-export class SpinnerModule { }
+export class SpinnerModule {}

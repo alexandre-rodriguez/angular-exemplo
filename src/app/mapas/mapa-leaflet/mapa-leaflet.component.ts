@@ -4,8 +4,6 @@ import * as L from 'leaflet';
 
 import { environment } from '../../../environments/environment';
 
-
-
 @Component({
   selector: 'app-mapa-leaflet',
   templateUrl: './mapa-leaflet.component.html',

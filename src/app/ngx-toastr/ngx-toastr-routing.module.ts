@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxToastrComponent } from './ngx-toastr.component';
 
-
 const routes: Routes = [
   {
     path: '',
-    component: NgxToastrComponent
-  }
+    component: NgxToastrComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class NgxToastrRoutingModule { }
+export class NgxToastrRoutingModule {}

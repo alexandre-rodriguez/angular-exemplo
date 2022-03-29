@@ -4,10 +4,9 @@ import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.scss']
+  styleUrls: ['./spinner.component.scss'],
 })
 export class SpinnerComponent {
-
   typeSelected: string;
 
   constructor(private spinnerService: NgxSpinnerService) {
@@ -23,5 +22,4 @@ export class SpinnerComponent {
       this.spinnerService.hide();
     }, 2000); // 5 seconds
   }
-
 }

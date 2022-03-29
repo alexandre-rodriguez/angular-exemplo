@@ -5,12 +5,12 @@ import { InternacionalizacaoComponent } from './internacionalizacao.component';
 const routes: Routes = [
   {
     path: '',
-    component: InternacionalizacaoComponent
-  }
+    component: InternacionalizacaoComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class InternacionalizacaoRoutingModule { }
+export class InternacionalizacaoRoutingModule {}
