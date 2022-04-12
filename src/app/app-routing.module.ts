@@ -74,6 +74,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'input-big-number-exemplo',
+    loadChildren: () =>
+      import('./input-big-number/input-big-number.module').then(
+        m => m.InputBigNumberModule
+      ),
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',
